@@ -16,7 +16,7 @@ class Publish(object):
     def mqtt(self):
         try:
             self.client = mqtt.Client()
-            status_connection = self.client.connect(self.aws_host, self.aws_port, keepalive=60)
+            status_connection = self.client.connect(self.host, self.port, keepalive=60)
             if status_connection == 0:
                 self.log.info("Successfully connected to Broker!")
                 self.connect = True
